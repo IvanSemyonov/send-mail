@@ -14662,14 +14662,13 @@ const nodemailer = __nccwpck_require__(4289);
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            let testEmailAccount = yield nodemailer.createTestAccount();
             let transporter = nodemailer.createTransport({
-                host: 'smtp.ethereal.email',
-                port: 587,
-                secure: false,
+                host: 'smtp.yandex.ru',
+                port: 465,
+                secure: true,
                 auth: {
-                    user: testEmailAccount.user,
-                    pass: testEmailAccount.pass,
+                    user: 'auto-merge-rc-job@yandex.ru',
+                    pass: 'quqpjiidfajnppkf'
                 },
             });
             let result = yield transporter.sendMail({

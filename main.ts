@@ -4,15 +4,13 @@ const nodemailer = require('nodemailer')
 async function main() {
 
     try {
-        let testEmailAccount = await nodemailer.createTestAccount()
-
         let transporter = nodemailer.createTransport({
-            host: 'smtp.ethereal.email',
-            port: 587,
-            secure: false,
+            host: 'smtp.yandex.ru',
+            port: 465,
+            secure: true,
             auth: {
-                user: testEmailAccount.user,
-                pass: testEmailAccount.pass,
+                user: 'auto-merge-rc-job@yandex.ru',
+                pass: 'quqpjiidfajnppkf'
             },
         })
 
