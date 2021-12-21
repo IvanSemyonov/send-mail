@@ -14662,19 +14662,17 @@ const nodemailer = __nccwpck_require__(4289);
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const nodemailer = __nccwpck_require__(4289);
-            let testEmailAccount = yield nodemailer.createTestAccount();
             let transporter = nodemailer.createTransport({
-                host: 'smtp.ethereal.email',
-                port: 587,
+                host: 'mail-int.sovcombank.group',
+                port: 25,
                 secure: false,
-                auth: {
-                    user: testEmailAccount.user,
-                    pass: testEmailAccount.pass,
-                },
+                // auth: {
+                //     user: 'auto-merge-rc-job@yandex.ru',
+                //     pass: 'quqpjiidfajnppkf',
+                // },
             });
             let result = yield transporter.sendMail({
-                from: '"Node js" <nodejs@example.com>',
+                from: 'auto-merge-rc-job',
                 to: 'semenovio@sovcombank.ru',
                 subject: 'Message from Node js',
                 text: 'This message was sent from Node js server.',
