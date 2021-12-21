@@ -4,22 +4,18 @@ const nodemailer = require('nodemailer')
 async function main() {
 
     try {
-        const nodemailer = require('nodemailer')
-
-        let testEmailAccount = await nodemailer.createTestAccount()
-
         let transporter = nodemailer.createTransport({
-            host: 'smtp.ethereal.email',
-            port: 587,
+            host: 'mail-int.sovcombank.group',
+            port: 25,
             secure: false,
-            auth: {
-                user: testEmailAccount.user,
-                pass: testEmailAccount.pass,
-            },
+            // auth: {
+            //     user: 'auto-merge-rc-job@yandex.ru',
+            //     pass: 'quqpjiidfajnppkf',
+            // },
         })
 
         let result = await transporter.sendMail({
-            from: '"Node js" <nodejs@example.com>',
+            from: 'auto-merge-rc-job',
             to: 'semenovio@sovcombank.ru',
             subject: 'Message from Node js',
             text: 'This message was sent from Node js server.',
