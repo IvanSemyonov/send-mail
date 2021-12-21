@@ -14675,14 +14675,10 @@ function main() {
             const server_port = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('server_port');
             const username = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('username');
             const password = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('password');
-            const subject = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('subject');
-            const githubUsername = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('to');
             const from = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('from');
+            const to = emails[_actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('to')];
+            const subject = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('subject');
             const body = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('body');
-            console.log(emails);
-            console.log(emails.size);
-            console.log(emails.get('IvanSemyonov'));
-            const to = "ffff";
             let transporter = nodemailer.createTransport({
                 host: server_address,
                 port: server_port,

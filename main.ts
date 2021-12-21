@@ -1,6 +1,6 @@
-import * as core from '@actions/core';
-const nodemailer = require('nodemailer');
-const emails: Map<String, String> = require('./emails.json');
+import * as core from '@actions/core'
+const nodemailer = require('nodemailer')
+const emails = require('./emails.json');
 
 async function main() {
     
@@ -9,16 +9,10 @@ async function main() {
         const server_port = core.getInput('server_port')
         const username = core.getInput('username')
         const password = core.getInput('password')
-        const subject = core.getInput('subject')
-        const githubUsername = core.getInput('to')
         const from = core.getInput('from')
+        const to = emails[core.getInput('to')]
+        const subject = core.getInput('subject')
         const body = core.getInput('body')
-
-        console.log(emails)
-        console.log(emails.size)
-        console.log(emails.get('IvanSemyonov'))
-
-        const to = "ffff";
 
         let transporter = nodemailer.createTransport({
             host: server_address,
