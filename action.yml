@@ -1,0 +1,6 @@
+name: send mail
+description: send mail
+
+runs:
+  using: node12
+  main: dist/index.js
