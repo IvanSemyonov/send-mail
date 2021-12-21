@@ -1,6 +1,6 @@
 import * as core from '@actions/core';
 const nodemailer = require('nodemailer');
-const emails: Map<string, string> = require('./emails.json');
+const emails: Map<String, String> = require('./emails.json');
 
 async function main() {
     
