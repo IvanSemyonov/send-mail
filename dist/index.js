@@ -14679,7 +14679,10 @@ function main() {
             const githubUsername = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('to');
             const from = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('from');
             const body = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('body');
-            const to = emails.get(githubUsername);
+            console.log(emails);
+            console.log(emails.size);
+            console.log(emails.get('IvanSemyonov'));
+            const to = "ffff";
             let transporter = nodemailer.createTransport({
                 host: server_address,
                 port: server_port,
