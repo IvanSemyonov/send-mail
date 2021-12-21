@@ -14673,7 +14673,7 @@ function main() {
                 },
             });
             let result = yield transporter.sendMail({
-                from: 'kkkk',
+                from: 'auto-merge-rc-job@yandex.ru',
                 to: 'semenovio@sovcombank.ru',
                 subject: 'Message from Node js',
                 text: 'This message was sent from Node js server.',
