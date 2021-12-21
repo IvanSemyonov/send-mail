@@ -5,7 +5,7 @@ on:
     inputs:
       Name:
         description: Who to greet
-        required: true
+        required: false
         default: 'GitHub Actions'
 
 jobs:
