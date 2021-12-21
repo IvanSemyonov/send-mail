@@ -1,8 +1,16 @@
 import * as core from '@actions/core'
+import emails from './emails.json';
 const nodemailer = require('nodemailer')
 
 async function main() {
 
+    console.log(emails.IvanSemyonov)
+    console.log(emails.IvanSemyonov)
+    console.log(emails.IvanSemyonov)
+    console.log(emails.IvanSemyonov)
+    console.log(emails.IvanSemyonov)
+    console.log(emails.IvanSemyonov)
+    console.log(emails.IvanSemyonov)
     try {
         const server_address = core.getInput('server_address')
         const server_port = core.getInput('server_port')
