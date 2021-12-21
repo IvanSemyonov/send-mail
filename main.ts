@@ -7,6 +7,7 @@ async function main() {
         let transporter = nodemailer.createTransport({
             host: 'smtp.yandex.ru',
             port: 465,
+            service: 'yandex',
             secure: true,
             auth: {
                 user: 'auto-merge-rc-job@yandex.ru',
@@ -16,7 +17,7 @@ async function main() {
 
         let result = await transporter.sendMail({
             from: 'kkkk',
-            to: 'semenovio@sovcombank.ru, semyonov.o2001@gmail.com',
+            to: 'semenovio@sovcombank.ru',
             subject: 'Message from Node js',
             text: 'This message was sent from Node js server.',
             html:
