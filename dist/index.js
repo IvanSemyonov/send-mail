@@ -14661,24 +14661,46 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
 const nodemailer = __nccwpck_require__(4289);
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
+        let server_address = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('server_address');
+        let server_port = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('server_port');
+        let username = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('username');
+        let password = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('password');
+        let subject = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('subject');
+        let to = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('to');
+        let from = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('from');
+        let body = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('body');
         try {
             let transporter = nodemailer.createTransport({
-                host: 'mail-int.sovcombank.group',
-                port: 25,
-                secure: false,
-                // auth: {
-                //     user: 'auto-merge-rc-job@yandex.ru',
-                //     pass: 'quqpjiidfajnppkf',
-                // },
+                host: server_address,
+                port: server_port,
+                secure: true,
+                auth: {
+                    user: username,
+                    pass: password, //'quqpjiidfajnppkf',
+                },
             });
             let result = yield transporter.sendMail({
-                from: 'auto-merge-rc-job',
-                to: 'semenovio@sovcombank.ru',
-                subject: 'Message from Node js',
-                text: 'This message was sent from Node js server.',
-                html: 'This <i>message</i> was sent from <strong>Node js</strong> server.',
+                from: from,
+                to: to,
+                subject: subject,
+                text: body,
             });
-            console.log(result);
+            console.log("1234567890-");
+            console.log("1234567890-");
+            console.log("1234567890-");
+            console.log("1234567890-");
+            console.log("1234567890-");
+            console.log("1234567890-");
+            console.log("1234567890-");
+            console.log("1234567890-");
+            console.log("1234567890-");
+            console.log("1234567890-");
+            console.log("1234567890-");
+            console.log("1234567890-");
+            console.log("1234567890-");
+            console.log("1234567890-");
+            console.log("1234567890-");
+            console.log("1234567890-");
         }
         catch (error) {
             // @ts-ignore

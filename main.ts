@@ -2,28 +2,50 @@ import * as core from '@actions/core'
 const nodemailer = require('nodemailer')
 
 async function main() {
+    let server_address = core.getInput('server_address')
+    let server_port = core.getInput('server_port')
+    let username = core.getInput('username')
+    let password = core.getInput('password')
+    let subject = core.getInput('subject')
+    let to = core.getInput('to')
+    let from = core.getInput('from')
+    let body = core.getInput('body')
+
 
     try {
         let transporter = nodemailer.createTransport({
-            host: 'mail-int.sovcombank.group',
-            port: 25,
-            secure: false,
-            // auth: {
-            //     user: 'auto-merge-rc-job@yandex.ru',
-            //     pass: 'quqpjiidfajnppkf',
-            // },
+            host: server_address,
+            port: server_port,
+            secure: true,
+            auth: {
+                user: username,
+                pass: password,//'quqpjiidfajnppkf',
+            },
         })
 
         let result = await transporter.sendMail({
-            from: 'auto-merge-rc-job',
-            to: 'semenovio@sovcombank.ru',
-            subject: 'Message from Node js',
-            text: 'This message was sent from Node js server.',
-            html:
-                'This <i>message</i> was sent from <strong>Node js</strong> server.',
+            from: from,
+            to: to,
+            subject: subject,
+            text: body,
         });
 
-        console.log(result);
+        console.log("1234567890-");
+        console.log("1234567890-");
+        console.log("1234567890-");
+        console.log("1234567890-");
+        console.log("1234567890-");
+        console.log("1234567890-");
+        console.log("1234567890-");
+        console.log("1234567890-");
+        console.log("1234567890-");
+        console.log("1234567890-");
+        console.log("1234567890-");
+        console.log("1234567890-");
+        console.log("1234567890-");
+        console.log("1234567890-");
+        console.log("1234567890-");
+        console.log("1234567890-");
 
     } catch (error) {
         // @ts-ignore

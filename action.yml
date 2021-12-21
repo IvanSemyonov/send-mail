@@ -4,3 +4,29 @@ description: send mail
 runs:
   using: node12
   main: dist/index.js
+
+inputs:
+  server_address:
+    description: mail server address
+    required: true
+  server_port:
+    description: port
+    required: true
+  username:
+    description: sender username
+    required: true
+  password:
+    description: sender password
+    required: true
+  subject:
+    description: mail subject
+    required: true
+  to:
+    description: recipients addresses
+    required: true
+  from:
+    description: sender full name
+    required: true
+  body:
+    description: message
+    required: true
