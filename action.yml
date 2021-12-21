@@ -22,7 +22,7 @@ inputs:
     description: mail subject
     required: true
   to:
-    description: recipients addresses
+    description: github actor
     required: true
   from:
     description: sender full name

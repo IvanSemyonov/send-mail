@@ -1,6 +1,14 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ 4772:
+/***/ ((module) => {
+
+"use strict";
+module.exports = JSON.parse('{"IvanSemyofffsdcsnov":"semenovio@dfvdfvdf cv vcsovcombank.com","ffffff":"semenovio@sfvdfvdfvovcombank.com","IvanSemyonov":"semenovio@sovcombank.com","@#$%^&*()":"semenvddfvdfdovio@sovcombank.com","IvanSemsbhfvd dvyonov":"svdfvdfvdfemenovio@sovcombank.com","IvanSerrmyonov":"semenovio@sovcosrfcvcsevfmbank.com"}');
+
+/***/ }),
+
 /***/ 7351:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
@@ -14413,76 +14421,6 @@ exports.debug = debug; // for test
 
 /***/ }),
 
-/***/ 7285:
-/***/ ((__unused_webpack_module, __webpack_exports__, __nccwpck_require__) => {
-
-"use strict";
-// ESM COMPAT FLAG
-__nccwpck_require__.r(__webpack_exports__);
-
-// EXTERNAL MODULE: ./node_modules/@actions/core/lib/core.js
-var core = __nccwpck_require__(2186);
-;// CONCATENATED MODULE: ./emails.json
-const emails_namespaceObject = JSON.parse('{"Z":"semenovio@sovcombank.com"}');
-;// CONCATENATED MODULE: ./main.ts
-var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-
-
-const nodemailer = __nccwpck_require__(4289);
-function main() {
-    return __awaiter(this, void 0, void 0, function* () {
-        console.log(emails_namespaceObject.Z);
-        console.log(emails_namespaceObject.Z);
-        console.log(emails_namespaceObject.Z);
-        console.log(emails_namespaceObject.Z);
-        console.log(emails_namespaceObject.Z);
-        console.log(emails_namespaceObject.Z);
-        console.log(emails_namespaceObject.Z);
-        try {
-            const server_address = core.getInput('server_address');
-            const server_port = core.getInput('server_port');
-            const username = core.getInput('username');
-            const password = core.getInput('password');
-            const subject = core.getInput('subject');
-            const to = core.getInput('to');
-            const from = core.getInput('from');
-            const body = core.getInput('body');
-            let transporter = nodemailer.createTransport({
-                host: server_address,
-                port: server_port,
-                secure: true,
-                auth: {
-                    user: username,
-                    pass: password,
-                },
-            });
-            let result = yield transporter.sendMail({
-                from: from,
-                to: to,
-                subject: subject,
-                text: body,
-            });
-            console.log(result);
-        }
-        catch (error) {
-            // @ts-ignore
-            core.setFailed(error.message);
-        }
-    });
-}
-main();
-
-
-/***/ }),
-
 /***/ 1913:
 /***/ ((module) => {
 
@@ -14668,6 +14606,35 @@ module.exports = require("zlib");;
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__nccwpck_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__nccwpck_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__nccwpck_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__nccwpck_require__.o(definition, key) && !__nccwpck_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__nccwpck_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -14682,12 +14649,64 @@ module.exports = require("zlib");;
 /******/ 	/* webpack/runtime/compat */
 /******/ 	
 /******/ 	if (typeof __nccwpck_require__ !== 'undefined') __nccwpck_require__.ab = __dirname + "/";/************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module doesn't tell about it's top-level declarations so it can't be inlined
-/******/ 	var __webpack_exports__ = __nccwpck_require__(7285);
-/******/ 	module.exports = __webpack_exports__;
-/******/ 	
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+(() => {
+"use strict";
+__nccwpck_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_core__WEBPACK_IMPORTED_MODULE_0__ = __nccwpck_require__(2186);
+/* harmony import */ var _actions_core__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__nccwpck_require__.n(_actions_core__WEBPACK_IMPORTED_MODULE_0__);
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
+const nodemailer = __nccwpck_require__(4289);
+const emails = __nccwpck_require__(4772);
+function main() {
+    return __awaiter(this, void 0, void 0, function* () {
+        try {
+            const server_address = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('server_address');
+            const server_port = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('server_port');
+            const username = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('username');
+            const password = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('password');
+            const subject = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('subject');
+            const githubUsername = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('to');
+            const from = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('from');
+            const body = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('body');
+            const to = emails.get(githubUsername);
+            let transporter = nodemailer.createTransport({
+                host: server_address,
+                port: server_port,
+                secure: true,
+                auth: {
+                    user: username,
+                    pass: password,
+                },
+            });
+            let result = yield transporter.sendMail({
+                from: from,
+                to: to,
+                subject: subject,
+                text: body,
+            });
+            console.log(result);
+        }
+        catch (error) {
+            // @ts-ignore
+            _actions_core__WEBPACK_IMPORTED_MODULE_0__.setFailed(error.message);
+        }
+    });
+}
+main();
+
+})();
+
+module.exports = __webpack_exports__;
 /******/ })()
 ;
