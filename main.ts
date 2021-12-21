@@ -1,5 +1,3 @@
-// @ts-ignore
-
 import * as core from '@actions/core'
 const nodemailer = require('nodemailer')
 
