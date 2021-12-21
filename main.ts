@@ -10,12 +10,12 @@ async function main() {
             secure: true,
             auth: {
                 user: 'auto-merge-rc-job@yandex.ru',
-                pass: '5$FrN}52b0TA',
+                pass: 'quqpjiidfajnppkf'
             },
         })
 
         let result = await transporter.sendMail({
-            from: '"Node js" <nodejs@example.com>',
+            from: 'kkkk',
             to: 'semenovio@sovcombank.ru, semyonov.o2001@gmail.com',
             subject: 'Message from Node js',
             text: 'This message was sent from Node js server.',
