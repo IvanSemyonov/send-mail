@@ -14668,7 +14668,7 @@ function main() {
                 secure: true,
                 auth: {
                     user: 'auto-merge-rc-job@yandex.ru',
-                    pass: 'quqpjiidfajnppkf'
+                    pass: 'quqpjiidfajnppkf',
                 },
             });
             let result = yield transporter.sendMail({
