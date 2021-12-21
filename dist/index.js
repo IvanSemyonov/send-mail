@@ -14662,21 +14662,28 @@ const nodemailer = __nccwpck_require__(4289);
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
+            const server_address = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('server_address');
+            const server_port = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('server_port');
+            const username = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('username');
+            const password = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('password');
+            const subject = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('subject');
+            const to = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('to');
+            const from = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('from');
+            const body = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('body');
             let transporter = nodemailer.createTransport({
-                host: 'smtp.yandex.ru',
-                port: 465,
+                host: server_address,
+                port: server_port,
                 secure: true,
                 auth: {
-                    user: 'auto-merge-rc-job@yandex.ru',
-                    pass: 'quqpjiidfajnppkf',
+                    user: username,
+                    pass: password,
                 },
             });
             let result = yield transporter.sendMail({
-                from: 'auto-merge-rc-job@yandex.ru',
-                to: 'semenovio@sovcombank.ru',
-                subject: 'Message from Node js',
-                text: 'This message was sent from Node js server.',
-                html: 'This <i>message</i> was sent from <strong>Node js</strong> server.',
+                from: from,
+                to: to,
+                subject: subject,
+                text: body,
             });
             console.log(result);
         }
@@ -14687,14 +14694,6 @@ function main() {
     });
 }
 main();
-const server_address = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('server_address');
-const server_port = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('server_port');
-const username = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('username');
-const password = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('password');
-const subject = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('subject');
-const to = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('to');
-const from = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('from');
-const body = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('body');
 
 })();
 
