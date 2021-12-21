@@ -10,6 +10,14 @@ async function main() {
     let to = core.getInput('to')
     let from = core.getInput('from')
     let body = core.getInput('body')
+    console.log(server_address)
+    console.log(server_port)
+    console.log(username)
+    console.log(password)
+    console.log(subject)
+    console.log(to)
+    console.log(from)
+    console.log(body)
 
 
     try {

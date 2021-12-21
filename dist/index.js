@@ -14669,6 +14669,14 @@ function main() {
         let to = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('to');
         let from = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('from');
         let body = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('body');
+        console.log(server_address);
+        console.log(server_port);
+        console.log(username);
+        console.log(password);
+        console.log(subject);
+        console.log(to);
+        console.log(from);
+        console.log(body);
         try {
             let transporter = nodemailer.createTransport({
                 host: server_address,
