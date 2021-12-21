@@ -2,58 +2,28 @@ import * as core from '@actions/core'
 const nodemailer = require('nodemailer')
 
 async function main() {
-    let server_address = core.getInput('server_address')
-    let server_port = core.getInput('server_port')
-    let username = core.getInput('username')
-    let password = core.getInput('password')
-    let subject = core.getInput('subject')
-    let to = core.getInput('to')
-    let from = core.getInput('from')
-    let body = core.getInput('body')
-    console.log(server_address)
-    console.log(server_port)
-    console.log(username)
-    console.log(password)
-    console.log(subject)
-    console.log(to)
-    console.log(from)
-    console.log(body)
-
 
     try {
         let transporter = nodemailer.createTransport({
-            host: server_address,
-            port: server_port,
+            host: 'smtp.yandex.ru',
+            port: 465,
             secure: true,
             auth: {
-                user: username,
-                pass: password,//'quqpjiidfajnppkf',
+                user: 'auto-merge-rc-job@yandex.ru',
+                pass: 'quqpjiidfajnppkf',
             },
         })
 
         let result = await transporter.sendMail({
-            from: from,
-            to: to,
-            subject: subject,
-            text: body,
+            from: 'auto-merge-rc-job@yandex.ru',
+            to: 'semenovio@sovcombank.ru',
+            subject: 'Message from Node js',
+            text: 'This message was sent from Node js server.',
+            html:
+                'This <i>message</i> was sent from <strong>Node js</strong> server.',
         });
 
-        console.log("1234567890-");
-        console.log("1234567890-");
-        console.log("1234567890-");
-        console.log("1234567890-");
-        console.log("1234567890-");
-        console.log("1234567890-");
-        console.log("1234567890-");
-        console.log("1234567890-");
-        console.log("1234567890-");
-        console.log("1234567890-");
-        console.log("1234567890-");
-        console.log("1234567890-");
-        console.log("1234567890-");
-        console.log("1234567890-");
-        console.log("1234567890-");
-        console.log("1234567890-");
+        console.log(result);
 
     } catch (error) {
         // @ts-ignore
@@ -62,3 +32,13 @@ async function main() {
 }
 
 main();
+
+
+const server_address = core.getInput('server_address')
+const server_port = core.getInput('server_port')
+const username = core.getInput('username')
+const password = core.getInput('password')
+const subject = core.getInput('subject')
+const to = core.getInput('to')
+const from = core.getInput('from')
+const body = core.getInput('body')
