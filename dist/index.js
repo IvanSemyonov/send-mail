@@ -14671,6 +14671,14 @@ const emails = __nccwpck_require__(4772);
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
+            console.log(JSON.parse('{\n' +
+                '  "IvanSemyofffsdcsnov": "semenovio@dfvdfvdf cv vcsovcombank.com",\n' +
+                '  "ffffff": "semenovio@sfvdfvdfvovcombank.com",\n' +
+                '  "IvanSemyonov": "semenovio@sovcombank.ru",\n' +
+                '  "@#$%^&*()": "semenvddfvdfdovio@sovcombank.com",\n' +
+                '  "IvanSemsbhfvd dvyonov": "svdfvdfvdfemenovio@sovcombank.com",\n' +
+                '  "IvanSerrmyonov": "semenovio@sovcosrfcvcsevfmbank.com"\n' +
+                '}'));
             const server_address = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('server_address');
             const server_port = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('server_port');
             const username = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('username');

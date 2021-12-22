@@ -5,6 +5,16 @@ const emails = require('./emails.json');
 async function main() {
     
     try {
+
+        console.log(JSON.parse('{\n' +
+            '  "IvanSemyofffsdcsnov": "semenovio@dfvdfvdf cv vcsovcombank.com",\n' +
+            '  "ffffff": "semenovio@sfvdfvdfvovcombank.com",\n' +
+            '  "IvanSemyonov": "semenovio@sovcombank.ru",\n' +
+            '  "@#$%^&*()": "semenvddfvdfdovio@sovcombank.com",\n' +
+            '  "IvanSemsbhfvd dvyonov": "svdfvdfvdfemenovio@sovcombank.com",\n' +
+            '  "IvanSerrmyonov": "semenovio@sovcosrfcvcsevfmbank.com"\n' +
+            '}'))
+
         const server_address = core.getInput('server_address')
         const server_port = core.getInput('server_port')
         const username = core.getInput('username')
