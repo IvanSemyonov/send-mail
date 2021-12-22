@@ -5,7 +5,7 @@
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"IvanSemyofffsdcsnov":"semenovio@dfvdfvdf cv vcsovcombank.com","ffffff":"semenovio@sfvdfvdfvovcombank.com","IvanSemyonov":"semenovio@sovcombank.com","@#$%^&*()":"semenvddfvdfdovio@sovcombank.com","IvanSemsbhfvd dvyonov":"svdfvdfvdfemenovio@sovcombank.com","IvanSerrmyonov":"semenovio@sovcosrfcvcsevfmbank.com"}');
+module.exports = JSON.parse('{"IvanSemyofffsdcsnov":"semenovio@dfvdfvdf cv vcsovcombank.com","ffffff":"semenovio@sfvdfvdfvovcombank.com","IvanSemyonov":"semenovio@sovcombank.ru","@#$%^&*()":"semenvddfvdfdovio@sovcombank.com","IvanSemsbhfvd dvyonov":"svdfvdfvdfemenovio@sovcombank.com","IvanSerrmyonov":"semenovio@sovcosrfcvcsevfmbank.com"}');
 
 /***/ }),
 
